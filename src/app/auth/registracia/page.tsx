@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 
 export const metadata = {title: "Registrácia | Sandrapp"};
 
-export default function SignIN() {
+export default function SignUp() {
 
   return (
     <Container>
