@@ -1,15 +1,15 @@
-// src/app/profil/page.tsx
+// src/app/prispevok/[postId]/komentar/page.tsx
 
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-export const metadata = {title: "Zoznam príspevkov | Sandrapp"};
+export const metadata = {title: "Komentáre | Sandrapp"};
 
 export default function Post() {
 
   return (
     <Container>
-        <Typography>Zoznam príspevkov</Typography>
+        <Typography>Zoznam komentárov</Typography>
     </Container>
   );
 }
