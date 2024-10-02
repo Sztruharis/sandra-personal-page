@@ -5,7 +5,9 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material';
-import { Home as HomeIcon, Search as SearchIcon, AddBox as AddBoxIcon, Notifications as NotificationsIcon, AccountCircle as AccountCircleIcon } from '@mui/icons-material';
+import { Home as HomeIcon, AddBox as AddBoxIcon, Login as LI, AccountCircle as ACI, AppRegistration as ARI } from '@mui/icons-material';
+
+
 
 export const metadata = {title: "Navigácia | Sandrapp"};
 
@@ -18,7 +20,7 @@ export default function NavBar() {
       sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} 
       elevation={3} // Add elevation for shadow effect
     >
-      <BottomNavigation
+<BottomNavigation
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
@@ -30,23 +32,24 @@ export default function NavBar() {
         <Link href="/" passHref>
           <BottomNavigationAction icon={<HomeIcon />} />
         </Link>
-        {/* Search Link */}
-        <Link href="/hladanie" passHref>
-          <BottomNavigationAction icon={<SearchIcon />} />
+        {/* Profiles Link */}
+        <Link href="/profil" passHref>
+          <BottomNavigationAction icon={<ACI/>} />
         </Link>
-        {/* Add Post Link */}
-        <Link href="/pridat" passHref>
+        {/* Posts Link */}
+        <Link href="/prispevok" passHref>
           <BottomNavigationAction icon={<AddBoxIcon />} />
         </Link>
-        {/* Notifications Link */}
-        <Link href="/notifikacie" passHref>
-          <BottomNavigationAction icon={<NotificationsIcon />} />
+        {/* Sign In Link */}
+        <Link href="/auth/prihlasenie" passHref>
+          <BottomNavigationAction icon={<LI />} />
         </Link>
-        {/* Profile Link */}
-        <Link href="/profil" passHref>
-          <BottomNavigationAction icon={<AccountCircleIcon />} />
+        {/* Registration Link */}
+        <Link href="/auth/registracia" passHref>
+          <BottomNavigationAction icon={<ARI />} />
         </Link>
       </BottomNavigation>
     </Paper>
+
   );
 }
